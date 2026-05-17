@@ -90,10 +90,10 @@ const M = {
 const stepCount = 8;
 const stepHeight = 0.5;
 const stepDepth = 0.5;
-const stepWidth = 6.5;
+const stepWidth = 10.0;
 const STAIR_TOP_Y = stepCount * stepHeight;
 const STAIR_TOP_Z = -stepCount * stepDepth;
-const STAIR_CENTER_X = 1.5;
+const STAIR_CENTER_X = 0;
 
 scene.add(makeMesh(new THREE.BoxGeometry(12, 0.2, 10), M.floor, [0, -0.1, 3], { receive: true }));
 scene.add(makeMesh(new THREE.BoxGeometry(12, 0.2, 4), M.floor, [0, STAIR_TOP_Y - 0.1, STAIR_TOP_Z - 2], { receive: true }));
@@ -115,12 +115,6 @@ for (let i = 0; i < stepCount; i++) {
     [STAIR_CENTER_X, stepHeight + i * stepHeight + 0.02, -i * stepDepth + stepDepth / 2 - 0.04]
   ));
 }
-
-const rampAngle = Math.atan2(stepCount * stepHeight, stepCount * stepDepth);
-const stairRamp = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 6.0, 16), M.metal);
-stairRamp.rotation.x = Math.PI / 2 - rampAngle;
-stairRamp.position.set(STAIR_CENTER_X, 2.5, -1.9);
-scene.add(stairRamp);
 
 // Panneau Sortie
 {
