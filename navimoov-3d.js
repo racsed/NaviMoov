@@ -149,10 +149,10 @@ const CARRIAGE_X = -3.5;
 
 const CARRIAGE_CLIMB_LIFT = 1.0;
 const CARRIAGE_PATH = [
-  new THREE.Vector3(CARRIAGE_X, CARRIAGE_BOTTOM_Y, 1.5),
-  new THREE.Vector3(CARRIAGE_X, CARRIAGE_BOTTOM_Y, 1.2),
+  new THREE.Vector3(CARRIAGE_X, CARRIAGE_BOTTOM_Y, 2.0),
+  new THREE.Vector3(CARRIAGE_X, CARRIAGE_BOTTOM_Y, 1.6),
   new THREE.Vector3(CARRIAGE_X, CARRIAGE_TOP_Y + CARRIAGE_CLIMB_LIFT, STAIR_TOP_Z + 0.3),
-  new THREE.Vector3(CARRIAGE_X, CARRIAGE_TOP_Y, STAIR_TOP_Z - 1.0)
+  new THREE.Vector3(CARRIAGE_X, CARRIAGE_TOP_Y + CARRIAGE_CLIMB_LIFT, STAIR_TOP_Z - 1.0)
 ];
 
 const segLen = [];
@@ -232,7 +232,7 @@ function makeCallStation() {
 }
 
 const bornBottom = makeCallStation();
-bornBottom.position.set(-1.5, 0, 3.6);
+bornBottom.position.set(-1.4, 0, 1.3);
 bornBottom.rotation.y = -Math.PI / 3;
 scene.add(bornBottom);
 
@@ -250,8 +250,10 @@ carriage.add(makeMesh(new THREE.BoxGeometry(1.25, 0.1, 0.15), M.metal, [-0.625, 
 carriage.add(makeMesh(new THREE.BoxGeometry(0.15, RAIL_VISUAL_OFFSET_Y, 0.15), M.metal, [-1.25, RAIL_VISUAL_OFFSET_Y / 2, 0]));
 
 const platform = new THREE.Group();
+platform.position.set(-0.65, 0, 0);
 carriage.add(platform);
 const deckGroup = new THREE.Group();
+deckGroup.position.set(0.65, 0, 0);
 platform.add(deckGroup);
 
 deckGroup.add(makeMesh(new THREE.BoxGeometry(1.3, PLATFORM_DECK_THICKNESS, 1.4), M.platformTop, [0, 0, 0], { cast: true, receive: true }));
@@ -352,10 +354,10 @@ wheelchair.add(makeMesh(new THREE.BoxGeometry(0.5, 0.12, 0.35), M.jeans, [0.4, 0
 wheelchair.traverse(c => { c.castShadow = true; });
 
 // POSITIONS
-const POS_START = { x: 1.5, z: 4.0, ry: Math.PI };
-const POS_AT_BORN_BOTTOM = { x: -1.4, z: 3.0, ry: Math.PI };
-const POS_BEFORE_RAMP = { x: -2.5, z: 1.5, ry: Math.PI };
-const POS_ON_PLATFORM_WORLD = new THREE.Vector3(CARRIAGE_X, 0, 1.5);
+const POS_START = { x: 3.0, z: 2.0, ry: Math.PI };
+const POS_AT_BORN_BOTTOM = { x: -1.4, z: 2.0, ry: Math.PI };
+const POS_BEFORE_RAMP = { x: -2.5, z: 2.0, ry: Math.PI };
+const POS_ON_PLATFORM_WORLD = new THREE.Vector3(CARRIAGE_X, 0, 2.0);
 const POS_EXIT_END = { x: -1.0, y: STAIR_TOP_Y, z: STAIR_TOP_Z - 3.0, ry: Math.PI };
 
 wheelchair.position.set(POS_START.x, 0, POS_START.z);
