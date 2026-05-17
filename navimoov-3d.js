@@ -317,22 +317,26 @@ deckGroup.add(passengerSlot);
 const wheelchair = new THREE.Group();
 scene.add(wheelchair);
 
-const wheelGeo = new THREE.TorusGeometry(0.32, 0.04, 8, 24);
-const wheelL = new THREE.Mesh(wheelGeo, M.wheelchair);
-wheelL.rotation.y = Math.PI / 2;
-wheelL.position.set(0, 0.32, 0.32);
+function makeWheel(radius, thickness, segments, pos) {
+  const group = new THREE.Group();
+  const disk = new THREE.Mesh(
+    new THREE.CylinderGeometry(radius, radius, thickness, segments),
+    M.wheelchair
+  );
+  disk.rotation.z = Math.PI / 2;
+  group.add(disk);
+  group.position.set(...pos);
+  return group;
+}
+
+const wheelL = makeWheel(0.32, 0.08, 24, [0, 0.32, 0.32]);
 wheelchair.add(wheelL);
-const wheelR = wheelL.clone();
-wheelR.position.set(0, 0.32, -0.32);
+const wheelR = makeWheel(0.32, 0.08, 24, [0, 0.32, -0.32]);
 wheelchair.add(wheelR);
 
-const smallWheelGeo = new THREE.TorusGeometry(0.1, 0.025, 8, 16);
-const smallWheelL = new THREE.Mesh(smallWheelGeo, M.wheelchair);
-smallWheelL.rotation.y = Math.PI / 2;
-smallWheelL.position.set(0.5, 0.1, 0.25);
+const smallWheelL = makeWheel(0.1, 0.05, 16, [0.5, 0.1, 0.25]);
 wheelchair.add(smallWheelL);
-const smallWheelR = smallWheelL.clone();
-smallWheelR.position.set(0.5, 0.1, -0.25);
+const smallWheelR = makeWheel(0.1, 0.05, 16, [0.5, 0.1, -0.25]);
 wheelchair.add(smallWheelR);
 
 wheelchair.add(makeMesh(new THREE.BoxGeometry(0.45, 0.06, 0.5), M.jacket, [0.15, 0.5, 0]));
