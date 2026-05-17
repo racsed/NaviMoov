@@ -557,6 +557,72 @@ button {
   .step-arrow { transform: rotate(90deg); margin: 8px auto; }
 }
 
+.solution-illustration {
+  margin: 80px auto 0;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.solution-illustration img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(20, 33, 61, 0.12);
+  border: 1px solid var(--border);
+}
+
+.solution-illustration figcaption {
+  margin-top: 20px;
+  font-size: 15px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ============================================
+   SECTION : CAMPAGNE
+   ============================================ */
+
+.section-campagne {
+  background: linear-gradient(180deg, var(--bg-soft) 0%, #ffffff 100%);
+}
+
+.campagne-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 64px;
+}
+
+.campagne-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(20, 33, 61, 0.06);
+}
+
+.campagne-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--green);
+  box-shadow: 0 20px 48px rgba(46, 204, 113, 0.18);
+}
+
+.campagne-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.campagne-card figcaption {
+  padding: 16px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
 /* ============================================
    SECTION : DEMO 3D
    ============================================ */
