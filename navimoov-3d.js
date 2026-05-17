@@ -147,10 +147,11 @@ const CARRIAGE_BOTTOM_Y = -PLATFORM_SURFACE_LOCAL_Y;
 const CARRIAGE_TOP_Y = STAIR_TOP_Y - PLATFORM_SURFACE_LOCAL_Y;
 const CARRIAGE_X = -3.5;
 
+const CARRIAGE_CLIMB_LIFT = 1.0;
 const CARRIAGE_PATH = [
   new THREE.Vector3(CARRIAGE_X, CARRIAGE_BOTTOM_Y, 1.5),
-  new THREE.Vector3(CARRIAGE_X, CARRIAGE_BOTTOM_Y, 0.7),
-  new THREE.Vector3(CARRIAGE_X, CARRIAGE_TOP_Y, STAIR_TOP_Z + 0.3),
+  new THREE.Vector3(CARRIAGE_X, CARRIAGE_BOTTOM_Y, 1.2),
+  new THREE.Vector3(CARRIAGE_X, CARRIAGE_TOP_Y + CARRIAGE_CLIMB_LIFT, STAIR_TOP_Z + 0.3),
   new THREE.Vector3(CARRIAGE_X, CARRIAGE_TOP_Y, STAIR_TOP_Z - 1.0)
 ];
 
@@ -231,7 +232,7 @@ function makeCallStation() {
 }
 
 const bornBottom = makeCallStation();
-bornBottom.position.set(-2.0, 0, 2.5);
+bornBottom.position.set(-1.5, 0, 3.6);
 bornBottom.rotation.y = -Math.PI / 3;
 scene.add(bornBottom);
 
