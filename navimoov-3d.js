@@ -323,7 +323,7 @@ function makeWheel(radius, thickness, segments, pos) {
     new THREE.CylinderGeometry(radius, radius, thickness, segments),
     M.wheelchair
   );
-  disk.rotation.z = Math.PI / 2;
+  disk.rotation.x = Math.PI / 2;
   group.add(disk);
   group.position.set(...pos);
   return group;
@@ -397,10 +397,10 @@ function reparentWheelchair(newParent) {
 }
 
 function rollWheels(rate) {
-  wheelL.rotation.x += rate;
-  wheelR.rotation.x += rate;
-  smallWheelL.rotation.x += rate * 3;
-  smallWheelR.rotation.x += rate * 3;
+  wheelL.rotation.z += rate;
+  wheelR.rotation.z += rate;
+  smallWheelL.rotation.z += rate * 3;
+  smallWheelR.rotation.z += rate * 3;
 }
 
 function lerpPos(from, to, p, fixedY = 0) {
