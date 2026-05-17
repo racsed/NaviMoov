@@ -19,7 +19,7 @@ scene.background = new THREE.Color(0xe8e8ea);
 scene.fog = new THREE.Fog(0xe8e8ea, 14, 35);
 
 const camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 1000);
-camera.position.set(8, 4, 7);
+camera.position.set(4, 5, 9);
 
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setSize(w, h);
@@ -90,7 +90,7 @@ const M = {
 const stepCount = 8;
 const stepHeight = 0.5;
 const stepDepth = 0.5;
-const stepWidth = 4.0;
+const stepWidth = 6.5;
 const STAIR_TOP_Y = stepCount * stepHeight;
 const STAIR_TOP_Z = -stepCount * stepDepth;
 const STAIR_CENTER_X = 1.5;
@@ -548,7 +548,7 @@ if (btnPause) {
 
 // Caméras
 const cameraPresets = {
-  overview: { pos: [8, 4, 7], target: [0, 2, -1] },
+  overview: { pos: [4, 5, 9], target: [0, 2, -1] },
   platform: { pos: [-1, 2.5, 4], target: [-3.5, 1, 0] },
   passenger: { pos: [2, 3, 5], target: [-2, 1, 1] }
 };
