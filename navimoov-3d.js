@@ -147,12 +147,12 @@ const CARRIAGE_BOTTOM_Y = -PLATFORM_SURFACE_LOCAL_Y;
 const CARRIAGE_TOP_Y = STAIR_TOP_Y - PLATFORM_SURFACE_LOCAL_Y;
 const CARRIAGE_X = -3.5;
 
-const CARRIAGE_CLIMB_LIFT = 1.0;
+const CLIMB_DECK_HUMP = 0.8;
 const CARRIAGE_PATH = [
   new THREE.Vector3(CARRIAGE_X, CARRIAGE_BOTTOM_Y, 2.0),
   new THREE.Vector3(CARRIAGE_X, CARRIAGE_BOTTOM_Y, 1.6),
-  new THREE.Vector3(CARRIAGE_X, CARRIAGE_TOP_Y + CARRIAGE_CLIMB_LIFT, STAIR_TOP_Z + 0.3),
-  new THREE.Vector3(CARRIAGE_X, CARRIAGE_TOP_Y + CARRIAGE_CLIMB_LIFT, STAIR_TOP_Z - 1.0)
+  new THREE.Vector3(CARRIAGE_X, CARRIAGE_TOP_Y, STAIR_TOP_Z + 0.3),
+  new THREE.Vector3(CARRIAGE_X, CARRIAGE_TOP_Y, STAIR_TOP_Z - 1.0)
 ];
 
 const segLen = [];
@@ -372,7 +372,7 @@ const ease = {
   inOutQuad: t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2
 };
 
-const PLATFORM_FOLDED = Math.PI / 2;
+const PLATFORM_FOLDED = 0;
 const PLATFORM_DEPLOYED = 0;
 const BARRIER_OPEN = -Math.PI / 2;
 const BARRIER_CLOSED = 0;
@@ -467,8 +467,9 @@ const phases = {
     const pu = Math.sin(r * Math.PI * 4);
     M.btnUp.emissiveIntensity = 0.5 + Math.max(0, pu) * 0.8;
     carriage.position.copy(carriagePosition(p));
+    deckGroup.position.y = Math.sin(Math.pow(p, 1.5) * Math.PI) * CLIMB_DECK_HUMP;
     M.ledStrip.emissiveIntensity = 0.6 + Math.sin(r * Math.PI * 6) * 0.3;
-  }, onExit: () => { M.btnUp.emissiveIntensity = 0.4; } },
+  }, onExit: () => { M.btnUp.emissiveIntensity = 0.4; deckGroup.position.y = 0; } },
   opening: { duration: 1.3, next: 'exit', update: (r) => {
     const p = ease.inOutQuad(r);
     barrierLeftPivot.rotation.x = BARRIER_CLOSED + (BARRIER_OPEN - BARRIER_CLOSED) * p;
@@ -495,9 +496,11 @@ const phases = {
     M.ledStrip.emissiveIntensity = 0.6 - 0.3 * p;
   } },
   returning: { duration: 4.5, next: 'reset', update: (r) => {
-    carriage.position.copy(carriagePosition(1 - ease.inOutCubic(r)));
+    const p = 1 - ease.inOutCubic(r);
+    carriage.position.copy(carriagePosition(p));
+    deckGroup.position.y = Math.sin(Math.pow(p, 1.5) * Math.PI) * CLIMB_DECK_HUMP;
     M.ledStrip.emissiveIntensity = 0.3;
-  } },
+  }, onExit: () => { deckGroup.position.y = 0; } },
   reset: { duration: 0.1, next: 'idle', update: () => {
     wheelchair.position.set(POS_START.x, 0, POS_START.z);
     wheelchair.rotation.y = POS_START.ry;
