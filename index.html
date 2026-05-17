@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NaviMoov — La mobilité pour tous</title>
+  <meta name="description" content="NaviMoov, plateforme élévatrice sur rail mural pour rendre les escaliers du métro parisien accessibles à tous. Une mini-entreprise lycéenne au Festival EPA 2026." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ====================================== -->
+  <!-- NAV BAR FIXE                            -->
+  <!-- ====================================== -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">
+      <img src="assets/logo.png" alt="NaviMoov" onerror="this.style.display='none'" />
+      <span><span class="logo-navi">Navi</span><span class="logo-moov">Moov</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#probleme">Le problème</a></li>
+      <li><a href="#solution">La solution</a></li>
+      <li><a href="#demo">Démo 3D</a></li>
+      <li><a href="#pour-qui">Pour qui</a></li>
+      <li><a href="#equipe">Équipe</a></li>
+      <li><a href="#festival">Festival</a></li>
+    </ul>
+    <button class="nav-burger" id="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ====================================== -->
+  <!-- SECTION 1 : HERO                        -->
+  <!-- ====================================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Festival EPA Île-de-France · 19 mai 2026</div>
+      <h1 class="hero-title">
+        La mobilité<br/>
+        <span class="gradient-text">pour tous.</span>
+      </h1>
+      <p class="hero-subtitle">
+        NaviMoov rend accessibles les 303 stations du métro parisien.
+        Une plateforme élévatrice sur rail mural, déployée en quelques jours,
+        utilisable par tous.
+      </p>
+      <div class="hero-cta">
+        <a href="#demo" class="btn btn-primary">Voir la démo 3D</a>
+        <a href="#probleme" class="btn btn-secondary">Découvrir le projet</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">303</div>
+          <div class="hero-stat-label">stations parisiennes</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num accent">29</div>
+          <div class="hero-stat-label">réellement accessibles</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num accent">90%</div>
+          <div class="hero-stat-label">sans ascenseur</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroller</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ====================================== -->
+  <!-- SECTION 2 : LE PROBLEME                 -->
+  <!-- ====================================== -->
+  <section class="section section-probleme" id="probleme">
+    <div class="container">
+      <div class="section-label">Le constat</div>
+      <h2 class="section-title">Un escalier. Personne. Chaque jour.</h2>
+
+      <div class="probleme-grid">
+        <div class="probleme-story">
+          <div class="story-quote">
+            « En décembre 2025, Charlotte Billot, jeune mère, publie sur LinkedIn
+            une photo d'elle bloquée avec sa poussette en bas d'un escalier du
+            métro parisien. La photo est partagée des milliers de fois. »
+          </div>
+          <p>
+            Elle met en lumière une réalité que chacun connaît mais que personne
+            ne résout : dans <strong>90 % des 303 stations</strong> du métro
+            parisien, les escaliers sont la seule option.
+          </p>
+          <p>
+            La loi de <strong>2005 sur l'accessibilité</strong> est toujours pas
+            respectée. Vingt ans plus tard. Pour les personnes en fauteuil
+            roulant, les parents avec poussettes, les personnes âgées et les
+            voyageurs chargés, le métro reste un parcours d'obstacles.
+          </p>
+        </div>
+
+        <div class="probleme-stats">
+          <div class="big-stat">
+            <div class="big-stat-num">303</div>
+            <div class="big-stat-label">stations dans le métro parisien</div>
+          </div>
+          <div class="big-stat alarm">
+            <div class="big-stat-num">29</div>
+            <div class="big-stat-label">seulement sont accessibles</div>
+          </div>
+          <div class="big-stat alarm">
+            <div class="big-stat-num">90 %</div>
+            <div class="big-stat-label">des stations sans ascenseur</div>
+          </div>
+          <div class="big-stat highlight">
+            <div class="big-stat-num">14</div>
+            <div class="big-stat-label">seule ligne 100% accessible</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================== -->
+  <!-- SECTION 3 : LA SOLUTION                 -->
+  <!-- ====================================== -->
+  <section class="section section-solution" id="solution">
+    <div class="container">
+      <div class="section-label">La solution</div>
+      <h2 class="section-title">
+        Une plateforme élévatrice<br/>sur rail mural.
+      </h2>
+      <p class="section-lead">
+        NaviMoov se fixe sur le mur le long de l'escalier, sans génie civil,
+        sans travaux lourds. À la demande, elle se déploie automatiquement,
+        transporte l'usager en toute sécurité, puis se replie pour libérer
+        le passage piéton.
+      </p>
+
+      <div class="solution-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-icon">▭</div>
+          <h3>Plateforme repliée</h3>
+          <p>Passage piéton libre. NaviMoov est plaqué contre le mur, invisible et discret.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-icon">▼</div>
+          <h3>Déploiement</h3>
+          <p>L'usager appuie sur le bouton de la borne d'appel. La plateforme se déploie automatiquement.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-icon">▲</div>
+          <h3>Montée sécurisée</h3>
+          <p>Barrières fermées, vitesse contrôlée. La plateforme glisse le long du rail mural.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-icon">✓</div>
+          <h3>Arrivée et repli</h3>
+          <p>L'usager rejoint le palier. La plateforme se replie automatiquement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================== -->
+  <!-- SECTION 4 : DEMO 3D                     -->
+  <!-- ====================================== -->
+  <section class="section section-demo" id="demo">
+    <div class="container">
+      <div class="section-label">Démonstration interactive</div>
+      <h2 class="section-title">Voyez NaviMoov en action.</h2>
+      <p class="section-lead">
+        Manipulez la scène 3D avec votre souris. Cliquez sur les boutons pour
+        contrôler la caméra. La démo boucle automatiquement.
+      </p>
+
+      <div class="demo-wrapper">
+        <div class="demo-frame">
+          <canvas id="scene3d"></canvas>
+
+          <!-- UI overlay sur la demo -->
+          <div class="demo-controls">
+            <button class="ctrl-btn active" data-camera="overview">Vue générale</button>
+            <button class="ctrl-btn" data-camera="platform">Vue plateforme</button>
+            <button class="ctrl-btn" data-camera="passenger">Vue usager</button>
+            <button class="ctrl-btn ctrl-pause" id="btn-pause">⏸ Pause</button>
+          </div>
+
+          <div class="demo-narration">
+            <div class="narration-title" id="narration-title">NaviMoov · Position repliée</div>
+            <div class="narration-subtitle" id="narration-subtitle">Passage piéton libre</div>
+          </div>
+
+          <div class="demo-counter">
+            <div class="counter-label">Personnes aidées</div>
+            <div class="counter-value" id="counter-value">127</div>
+          </div>
+        </div>
+
+        <div class="demo-tips">
+          <div class="tip"><strong>Cliquer-glisser</strong> pour orbiter</div>
+          <div class="tip"><strong>Molette</strong> pour zoomer</div>
+          <div class="tip"><strong>Boutons</strong> pour changer de vue</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================== -->
+  <!-- SECTION 5 : POUR QUI                    -->
+  <!-- ====================================== -->
+  <section class="section section-pour-qui" id="pour-qui">
+    <div class="container">
+      <div class="section-label">Public concerné</div>
+      <h2 class="section-title">Accessible à tous. Partout. Tout le temps.</h2>
+
+      <div class="usagers-grid">
+        <div class="usager-card">
+          <div class="usager-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><path d="M14 8h-4l-1 6h6.5l2 4 2-1-2.5-5h-3l.5-2 4 1V9l-4-1z"/><circle cx="11" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Fauteuils roulants</h3>
+          <p>Pour les <strong>2,8 millions</strong> de personnes en situation de handicap moteur en France.</p>
+        </div>
+
+        <div class="usager-card">
+          <div class="usager-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10c0-3 2-5 5-5h4l4 4v6H7"/><circle cx="8" cy="18" r="2"/><circle cx="16" cy="18" r="2"/></svg>
+          </div>
+          <h3>Poussettes</h3>
+          <p>Pour les parents qui peinent à descendre ou monter avec un bébé endormi.</p>
+        </div>
+
+        <div class="usager-card">
+          <div class="usager-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="4" r="2"/><path d="M10 7l-2 4 1 2 1-1 1 9h2l-1-9 2 2 3-1-3-4z"/><path d="M14 22l3-2"/></svg>
+          </div>
+          <h3>Personnes âgées</h3>
+          <p>Pour celles qui ont des difficultés à gravir des marches sans assistance.</p>
+        </div>
+
+        <div class="usager-card">
+          <div class="usager-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="8" width="8" height="10" rx="1"/><path d="M8 8V5h4v3"/><circle cx="7" cy="20" r="1.5"/><circle cx="13" cy="20" r="1.5"/></svg>
+          </div>
+          <h3>Voyageurs chargés</h3>
+          <p>Pour tous ceux qui transportent valises, courses, instruments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================== -->
+  <!-- SECTION 6 : CARACTERISTIQUES            -->
+  <!-- ====================================== -->
+  <section class="section section-features">
+    <div class="container">
+      <div class="section-label">Caractéristiques techniques</div>
+      <h2 class="section-title">Conçu pour durer. Pensé pour tous.</h2>
+
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">🔩</div>
+          <h3>Installation fixe</h3>
+          <p>Sur rail mural le long de l'escalier. Aucun génie civil, aucun creusement.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔇</div>
+          <h3>Motorisation silencieuse</h3>
+          <p>Électrique, faible consommation. Compatible avec les normes acoustiques des stations.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎯</div>
+          <h3>3 boutons intuitifs</h3>
+          <p>MONTER, DESCENDRE, ARRÊT D'URGENCE. Utilisable sans formation, sans application.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🛡️</div>
+          <h3>Sécurité maximale</h3>
+          <p>Ceinture, barrières latérales, arrêt d'urgence automatique, surface antidérapante.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⏱️</div>
+          <h3>Installation rapide</h3>
+          <p>Quelques jours par station, contre plusieurs mois ou années pour un ascenseur.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">♻️</div>
+          <h3>Repli automatique</h3>
+          <p>La plateforme se replie seule après usage. Le passage piéton reste libre en permanence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================== -->
+  <!-- SECTION 7 : EQUIPE                      -->
+  <!-- ====================================== -->
+  <section class="section section-equipe" id="equipe">
+    <div class="container">
+      <div class="section-label">L'équipe</div>
+      <h2 class="section-title">Une mini-entreprise lycéenne.</h2>
+      <p class="section-lead">
+        Quinze élèves de Première et Terminale STMG du Lycée Léonard de Vinci,
+        Tremblay-en-France. Cinq départements. Un projet construit en six mois.
+      </p>
+
+      <div class="equipe-grid">
+        <div class="dept-card">
+          <div class="dept-icon">📊</div>
+          <h3>Marketing</h3>
+          <p class="dept-members">Wissam, Fiston, Ilyes</p>
+          <p>Étude de marché, positionnement, identité visuelle, slogans.</p>
+        </div>
+        <div class="dept-card">
+          <div class="dept-icon">⚙️</div>
+          <h3>Production</h3>
+          <p class="dept-members">Aliou, Babou, Exaucé</p>
+          <p>Conception et fabrication du prototype NaviMoov.</p>
+        </div>
+        <div class="dept-card">
+          <div class="dept-icon">📣</div>
+          <h3>Communication</h3>
+          <p class="dept-members">Lina, Salma, Layana</p>
+          <p>Réseaux sociaux, script vidéo, affiches, pitch festival.</p>
+        </div>
+        <div class="dept-card">
+          <div class="dept-icon">💰</div>
+          <h3>Finance</h3>
+          <p class="dept-members">Manel, Kenza, Mantita</p>
+          <p>Budget, modèle économique, coûts d'installation.</p>
+        </div>
+        <div class="dept-card">
+          <div class="dept-icon">🤝</div>
+          <h3>Ressources Humaines</h3>
+          <p class="dept-members">Aymane, Mohamed, Léna</p>
+          <p>Coordination, planning, gestion des livrables.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================== -->
+  <!-- SECTION 8 : FESTIVAL                    -->
+  <!-- ====================================== -->
+  <section class="section section-festival" id="festival">
+    <div class="container">
+      <div class="festival-banner">
+        <div class="festival-content">
+          <div class="festival-date">19 mai 2026</div>
+          <h2>Festival EPA Île-de-France</h2>
+          <p>
+            Salle Olympe de Gouges, Paris 11. Venez découvrir NaviMoov sur notre
+            stand, manipuler le prototype, et soutenir une innovation lycéenne
+            qui pourrait changer la mobilité parisienne.
+          </p>
+          <div class="festival-tags">
+            <span>#Innovation</span>
+            <span>#Inclusion</span>
+            <span>#MobilitéPourTous</span>
+            <span>#Accessibilité</span>
+            <span>#EntreprendrePourApprendre</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-final">
+        <h2 class="gradient-text">Accessible à tous.<br/>Partout. Tout le temps.</h2>
+        <p>L'accessibilité n'est pas un confort. C'est un droit.</p>
+        <a href="#demo" class="btn btn-primary btn-large">Revoir la démo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================== -->
+  <!-- FOOTER                                  -->
+  <!-- ====================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-navi">Navi</span><span class="logo-moov">Moov</span>
+          </div>
+          <p>La mobilité pour tous.</p>
+          <p class="footer-meta">Mini-entreprise — Lycée Léonard de Vinci, Tremblay-en-France · Académie de Créteil · 2026</p>
+        </div>
+        <div class="footer-links">
+          <h4>Le projet</h4>
+          <a href="#probleme">Le problème</a>
+          <a href="#solution">La solution</a>
+          <a href="#demo">Démo 3D</a>
+          <a href="#pour-qui">Public concerné</a>
+        </div>
+        <div class="footer-links">
+          <h4>L'équipe</h4>
+          <a href="#equipe">La mini-entreprise</a>
+          <a href="#festival">Festival EPA</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 NaviMoov · Projet pédagogique Entreprendre Pour Apprendre</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================== -->
+  <!-- SCRIPTS                                 -->
+  <!-- ====================================== -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script src="script.js" defer></script>
+  <script type="module" src="navimoov-3d.js"></script>
+</body>
+</html>
